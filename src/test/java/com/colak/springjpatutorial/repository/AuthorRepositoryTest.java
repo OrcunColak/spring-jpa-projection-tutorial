@@ -21,7 +21,7 @@ class AuthorRepositoryTest {
     void findAllProjectedBy() {
         List<AuthorProjection> list = repository.findAllProjectedBy();
         for (AuthorProjection authorProjection : list) {
-            log.info("Id : {} , Name : {}", authorProjection.getId(), authorProjection.getName());
+            log.info("Id : {} , Name : {}", authorProjection.getId(), authorProjection.getAuthorName());
         }
     }
 
