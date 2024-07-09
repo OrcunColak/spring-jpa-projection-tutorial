@@ -40,4 +40,12 @@ class AuthorRepositoryTest {
             log.info("Id : {} , Name : {}", authorClassProjection.id(), authorClassProjection.name());
         }
     }
+
+    @Test
+    void findAllProjectedByName() {
+        List<AuthorClassProjection> list = repository.findAllProjectedByName("Author 1");
+        for (AuthorClassProjection authorClassProjection : list) {
+            log.info("Id : {} , Name : {}", authorClassProjection.id(), authorClassProjection.name());
+        }
+    }
 }

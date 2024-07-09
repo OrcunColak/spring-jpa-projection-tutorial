@@ -21,4 +21,7 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
     @Query("SELECT NEW com.colak.springjpatutorial.projection.AuthorClassProjection(a.id, a.name) FROM Author a where a.id > :minId")
     List<AuthorClassProjection> findAllProjectedByAge(@Param("minId") int minId);
 
+    @Query("SELECT NEW com.colak.springjpatutorial.projection.AuthorClassProjection(a.id, a.name) FROM Author a where a.name = :name")
+    List<AuthorClassProjection> findAllProjectedByName(@Param("name") String name);
+
 }
