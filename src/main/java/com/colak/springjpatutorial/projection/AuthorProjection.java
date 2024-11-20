@@ -2,10 +2,9 @@ package com.colak.springjpatutorial.projection;
 
 import org.springframework.beans.factory.annotation.Value;
 
-/**
- * Example for interface based projection
- */
+// Example for interface based projection
 public interface AuthorProjection {
+
     Long getId();
 
     // Spring Expression Language for projection example
